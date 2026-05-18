@@ -1,0 +1,77 @@
+{
+  "settings": {
+    "timezone": "Asia/Bangkok",
+    "weekStartsOn": 1,
+    "dayStart": "07:00",
+    "dayEnd": "21:00"
+  },
+  "students": [
+    {
+      "id": "an",
+      "name": "Bon",
+      "schoolClass": "5A8",
+      "color": "#0f766e",
+      "notes": ""
+    },
+    {
+      "id": "binh",
+      "name": "Bông",
+      "schoolClass": "3A2",
+      "color": "#b45309",
+      "notes": ""
+    },
+    {
+      "id": "chi",
+      "name": "Bo",
+      "schoolClass": "5tuoiA2",
+      "color": "#4f46e5",
+      "notes": ""
+    }
+  ],
+  "lessons": [
+    {
+      "id": "mon-math-an",
+      "studentId": "binh",
+      "subject": "Tiếng Anh",
+      "teacher": "Doraemon",
+      "location": "Doraemon Chờ",
+      "dayOfWeek": 5,
+      "startTime": "17:00",
+      "endTime": "19:00",
+      "notes": ""
+    },
+    {
+      "id": "chi-0-1700-ti-n-ti-u-h-c",
+      "studentId": "chi",
+      "subject": "Tiền Tiểu Học ",
+      "teacher": "Cô Tâm",
+      "location": "Ngô Nội",
+      "dayOfWeek": 0,
+      "startTime": "17:00",
+      "endTime": "19:00",
+      "notes": ""
+    },
+    {
+      "id": "an-1-1700-ti-ng-anh",
+      "studentId": "an",
+      "subject": "Tiếng Anh",
+      "teacher": "Cô Khước",
+      "location": "Trung tâm Eden",
+      "dayOfWeek": 1,
+      "startTime": "17:00",
+      "endTime": "19:00",
+      "notes": ""
+    },
+    {
+      "id": "an-0-0730-ti-ng-vi-t",
+      "studentId": "an",
+      "subject": "Tiếng Việt",
+      "teacher": "Cô Hương",
+      "location": "Phú Mẫn",
+      "dayOfWeek": 0,
+      "startTime": "07:30",
+      "endTime": "09:30",
+      "notes": ""
+    }
+  ]
+}
