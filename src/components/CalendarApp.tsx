@@ -278,7 +278,7 @@ export default function CalendarApp({ seedData }: CalendarAppProps) {
           <div className="overflow-x-auto">
             <div className="grid min-w-[760px] grid-cols-7">
               {orderedDays.map((day) => (
-                <div key={day} className="relative min-h-[620px] border-r border-slate-200 bg-white px-2 py-2 last:border-r-0">
+                <div key={day} className="relative min-h-[860px] border-r border-slate-200 bg-white px-2 py-2 last:border-r-0">
                   {day === currentParts.weekday ? (
                     <div
                       className="absolute left-0 right-0 z-10 border-t-2 border-rose-500"
@@ -308,16 +308,26 @@ export default function CalendarApp({ seedData }: CalendarAppProps) {
                         style={{
                           top: `${Math.max(0, top)}%`,
                           height: `${Math.max(7, height)}%`,
+                          minHeight: "112px",
                           borderColor: student?.color,
                           background: `${student?.color ?? "#334155"}17`,
                         }}
                         onClick={() => selectLesson(lesson)}
                       >
-                        <span className="text-xs font-semibold text-slate-500">
+                        <span className="block text-xs font-semibold leading-snug text-slate-500">
                           {formatTime(lesson.startTime)} - {formatTime(lesson.endTime)}
                         </span>
-                        <span className="mt-1 block truncate text-sm font-semibold">{lesson.subject}</span>
-                        <span className="block truncate text-xs text-slate-600">{student?.name} · {lesson.location}</span>
+                        <span className="mt-1 block text-sm font-semibold leading-snug text-slate-950">
+                          {lesson.subject}
+                        </span>
+                        <span className="mt-1 block text-xs leading-snug text-slate-700">
+                          {student?.name}
+                          {lesson.teacher ? ` · ${lesson.teacher}` : ""}
+                        </span>
+                        <span className="mt-1 flex items-start gap-1 text-xs leading-snug text-slate-600">
+                          <MapPin className="mt-0.5 h-3.5 w-3.5 shrink-0" />
+                          <span>{lesson.location}</span>
+                        </span>
                       </button>
                     );
                   })}
