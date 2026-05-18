@@ -268,15 +268,16 @@ export default function CalendarApp({ seedData }: CalendarAppProps) {
 
       <section className="mx-auto grid max-w-7xl gap-4 px-4 py-5 sm:px-6 lg:grid-cols-[1fr_360px] lg:px-8">
         <div className="overflow-hidden rounded-md border border-slate-200 bg-white shadow-soft">
-          <div className="grid min-w-[760px] grid-cols-7 border-b border-slate-200 bg-slate-50">
-            {orderedDays.map((day) => (
-              <div key={day} className="border-r border-slate-200 px-3 py-3 last:border-r-0">
-                <p className="text-sm font-semibold">{dayNames[day]}</p>
-              </div>
-            ))}
-          </div>
           <div className="overflow-x-auto">
-            <div className="grid min-w-[760px] grid-cols-7">
+            <div className="min-w-[760px]">
+              <div className="grid grid-cols-7 border-b border-slate-200 bg-slate-50">
+                {orderedDays.map((day) => (
+                  <div key={day} className="border-r border-slate-200 px-3 py-3 last:border-r-0">
+                    <p className="text-sm font-semibold">{dayNames[day]}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="grid grid-cols-7">
               {orderedDays.map((day) => (
                 <div key={day} className="relative min-h-[860px] border-r border-slate-200 bg-white px-2 py-2 last:border-r-0">
                   {day === currentParts.weekday ? (
@@ -333,6 +334,7 @@ export default function CalendarApp({ seedData }: CalendarAppProps) {
                   })}
                 </div>
               ))}
+              </div>
             </div>
           </div>
         </div>
